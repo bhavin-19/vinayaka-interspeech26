@@ -794,22 +794,48 @@ footer {
         align-items: center;
     }
 }
-.mini-contact {
+/* ==========================================
+   CONTACT
+========================================== */
 
-    padding: 30px 0;
+.contact-section {
+
+    padding: 60px 0;
+}
+
+.contact-card {
+
+    max-width: 600px;
+
+    margin: 0 auto;
 
     text-align: center;
+}
+
+.contact-card h2 {
+
+    margin-bottom: 10px;
+}
+
+.contact-card p {
 
     color: #6b7280;
 
-    border-top: 1px solid #e5e7eb;
+    margin-bottom: 10px;
 }
 
-.mini-contact a {
+.contact-email {
 
     color: #2563eb;
 
     text-decoration: none;
 
     font-weight: 600;
+
+    transition: opacity 0.2s ease;
+}
+
+.contact-email:hover {
+
+    opacity: 0.75;
 }
