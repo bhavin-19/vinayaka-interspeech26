@@ -461,9 +461,9 @@ body {
 
 .results-table {
 
-    width: 100%;
+    width: auto;
 
-    min-width: 1100px;
+    min-width: 850px;
 
     border-collapse: collapse;
 
