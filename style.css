@@ -298,6 +298,15 @@ body {
    METHOD
 ========================================== */
 
+/* ==========================================
+   METHOD
+========================================== */
+
+.method-intro {
+    margin-bottom: 40px;
+    text-align: justify;
+}
+
 .method-image {
 
     width: 100%;
@@ -306,12 +315,90 @@ body {
 
     border: 1px solid #e5e7eb;
 
-    margin-bottom: 35px;
+    margin-bottom: 45px;
+
+    box-shadow:
+        0 8px 24px rgba(0,0,0,0.06);
 }
 
-.method-description p {
-    margin-bottom: 16px;
+.method-block {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 30px;
+
+    margin-bottom: 40px;
 }
+
+.method-number {
+
+    min-width: 48px;
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    background: #2563eb;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 700;
+    font-size: 1.1rem;
+
+    flex-shrink: 0;
+}
+
+.method-content {
+    flex: 1;
+}
+
+.method-content h3 {
+
+    margin-bottom: 10px;
+
+    font-size: 1.15rem;
+
+    font-weight: 700;
+
+    color: #111827;
+}
+
+.method-content p {
+
+    margin-bottom: 0;
+
+    color: #374151;
+
+    text-align: justify;
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+    .method-block {
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .method-number {
+
+        width: 42px;
+        height: 42px;
+
+        font-size: 1rem;
+    }
+}
+
 
 /* ==========================================
    RESULTS
