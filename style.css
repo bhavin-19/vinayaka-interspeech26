@@ -402,69 +402,289 @@ body {
 /* ==========================================
    RESULTS
 ========================================== */
+/* ==========================================
+   RESULTS SECTION
+========================================== */
 
 .results-note {
 
     text-align: center;
 
-    margin-bottom: 25px;
+    max-width: 900px;
+
+    margin: 0 auto 30px auto;
 
     color: #6b7280;
+
+    font-size: 1rem;
 }
 
-.results-placeholder {
+.results-subtitle {
 
-    min-height: 250px;
+    margin-top: 40px;
+    margin-bottom: 20px;
 
-    display: flex;
+    text-align: center;
 
-    justify-content: center;
-    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
 
-    border: 2px dashed #cbd5e1;
+    color: #111827;
+}
 
-    border-radius: 14px;
+/* ==========================================
+   TABLE WRAPPER
+========================================== */
+
+.table-wrapper {
+
+    width: 100%;
+
+    overflow-x: auto;
+
+    margin-top: 25px;
+    margin-bottom: 25px;
 
     background: white;
 
-    font-weight: 600;
+    border: 1px solid #e5e7eb;
 
-    color: #64748b;
+    border-radius: 14px;
+
+    box-shadow:
+        0 8px 24px rgba(0,0,0,0.05);
 }
 
-/* If you later replace with a large table */
-
-.results-table-wrapper {
-    overflow-x: auto;
-}
+/* ==========================================
+   MAIN TABLE
+========================================== */
 
 .results-table {
 
     width: 100%;
 
+    min-width: 1100px;
+
     border-collapse: collapse;
 
-    margin-top: 20px;
+    background: white;
 }
 
-.results-table th,
-.results-table td {
+/* ==========================================
+   CAPTION
+========================================== */
 
-    padding: 12px;
+.results-table caption {
 
-    border: 1px solid #e5e7eb;
+    caption-side: top;
+
+    padding: 18px;
+
+    font-weight: 600;
+
+    color: #374151;
 
     text-align: center;
 }
 
-.results-table th {
-    background: #eff6ff;
+/* ==========================================
+   HEADER
+========================================== */
+
+.results-table thead th {
+
+    background: #2563eb;
+
+    color: white;
+
+    padding: 14px 12px;
+
+    text-align: center;
+
+    font-weight: 700;
+
+    border: 1px solid #1d4ed8;
 }
 
+.results-table thead tr:first-child th {
+
+    font-size: 1rem;
+}
+
+.results-table thead tr:nth-child(2) th {
+
+    background: #1d4ed8;
+
+    font-size: 0.92rem;
+}
+
+/* ==========================================
+   BODY CELLS
+========================================== */
+
+.results-table td {
+
+    padding: 12px 10px;
+
+    text-align: center;
+
+    border: 1px solid #e5e7eb;
+
+    font-size: 0.95rem;
+}
+
+/* ==========================================
+   FIRST COLUMN
+========================================== */
+
+.results-table td:first-child,
+.results-table th:first-child {
+
+    position: sticky;
+
+    left: 0;
+
+    background: inherit;
+
+    font-weight: 600;
+
+    z-index: 2;
+}
+
+.results-table thead th:first-child {
+
+    background: #2563eb;
+}
+
+/* ==========================================
+   SECTION ROWS
+========================================== */
+
+.section-row td {
+
+    background: #1e293b !important;
+
+    color: white;
+
+    font-weight: 700;
+
+    font-size: 1rem;
+
+    text-align: center;
+
+    padding: 14px;
+
+    letter-spacing: 0.3px;
+}
+
+/* ==========================================
+   DATASET ROWS
+========================================== */
+
+.dataset-row td {
+
+    background: #e2e8f0 !important;
+
+    color: #111827;
+
+    font-weight: 700;
+
+    text-align: center;
+
+    padding: 12px;
+}
+
+/* ==========================================
+   HIGHLIGHT VINAYAKA
+========================================== */
+
 .highlight-row {
-    background: #dbeafe;
+
+    background: #dbeafe !important;
+
     font-weight: 700;
 }
+
+.highlight-row td {
+
+    color: #1e3a8a;
+
+    font-weight: 700;
+}
+
+/* ==========================================
+   HOVER EFFECT
+========================================== */
+
+.results-table tbody tr:hover {
+
+    background: #f8fafc;
+}
+
+/* Keep section rows fixed */
+
+.section-row:hover td,
+.dataset-row:hover td {
+
+    background: inherit;
+}
+
+/* ==========================================
+   TABLE CAPTION BELOW TABLE
+========================================== */
+
+.table-caption {
+
+    margin-top: 20px;
+
+    text-align: center;
+
+    color: #6b7280;
+
+    font-size: 0.95rem;
+
+    line-height: 1.6;
+
+    max-width: 1000px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 900px) {
+
+    .results-table {
+
+        min-width: 1000px;
+    }
+
+    .results-table td,
+    .results-table th {
+
+        padding: 10px 8px;
+
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .results-note {
+
+        font-size: 0.95rem;
+    }
+
+    .table-caption {
+
+        font-size: 0.85rem;
+    }
+}
+
+
 
 /* ==========================================
    BIBTEX
