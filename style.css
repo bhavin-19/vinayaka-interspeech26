@@ -540,9 +540,7 @@ body {
 .results-table td:first-child,
 .results-table th:first-child {
 
-    position: sticky;
-
-    left: 0;
+    font-weight: 600;
 
     background: inherit;
 
