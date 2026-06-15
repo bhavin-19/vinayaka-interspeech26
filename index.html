@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -243,47 +243,168 @@
 <!-- METHOD -->
 <!-- ========================= -->
 
+
 <section id="method" class="section">
 
     <div class="container">
 
-        <h2>Method Overview</h2>
+        <h2>Method</h2>
+
+        <p class="method-intro">
+
+            <strong>VINAYAKA</strong> (Multilingual Audio-Visual Hate Speech Detection via Cross-Modal Fusion in Hyperbolic Space)
+            detects hateful intent directly from audio and visual signals without relying on textual transcriptions.
+            The framework combines pretrained audio and visual representations with hyperbolic cross-modal reasoning
+            to model interactions between paralinguistic speech cues and behavioral visual cues.
+            By performing multimodal fusion in hyperbolic space, VINAYAKA captures hierarchical relationships
+            between modalities and improves generalization across languages and datasets.
+
+        </p>
 
         <img
-            src="assests/architecture.png"
+            src="assets/architecture.png"
+            alt="VINAYAKA Architecture"
             class="method-image">
 
-        <div class="method-description">
+        <div class="method-block">
 
-            <p>
-                VINAYAKA extracts audio representations using
-                WavLM and visual representations using
-                ImageBind.
-            </p>
+            <div class="method-number">1</div>
 
-            <p>
-                Both modalities are projected into
-                hyperbolic space, enabling geometry-aware
-                modeling of semantic and behavioral
-                relationships.
-            </p>
+            <div class="method-content">
 
-            <p>
-                Audio-guided visual attention and
-                video-guided audio attention are performed
-                through hyperbolic cross-attention modules.
-            </p>
+                <h3>Feature Extraction</h3>
 
-            <p>
-                Finally, fused hyperbolic representations
-                are used for hate speech classification.
-            </p>
+                <p>
+
+                    Raw audio waveforms are processed using
+                    <strong>WavLM</strong>, while video frames are encoded
+                    using the <strong>ImageBind Visual Encoder</strong>.
+                    These pretrained encoders generate rich semantic and
+                    behavioral representations for each modality.
+                    The resulting audio embedding
+                    <em>E<sup>(a)</sup></em>
+                    and visual embedding
+                    <em>E<sup>(v)</sup></em>
+                    capture complementary information relevant to
+                    multilingual hate speech detection.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="method-block">
+
+            <div class="method-number">2</div>
+
+            <div class="method-content">
+
+                <h3>1D-CNN and Temporal Aggregation</h3>
+
+                <p>
+
+                    Audio and visual representations are independently
+                    passed through a lightweight
+                    <strong>1D-CNN</strong>
+                    followed by
+                    <strong>max-pooling</strong>.
+                    This stage refines modality-specific patterns,
+                    suppresses noise, and aggregates temporal information.
+                    The pooled representations are flattened to produce
+                    compact feature vectors suitable for multimodal interaction.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="method-block">
+
+            <div class="method-number">3</div>
+
+            <div class="method-content">
+
+                <h3>Geometric Projection into Hyperbolic Space</h3>
+
+                <p>
+
+                    The flattened Euclidean representations are projected
+                    into a shared
+                    <strong>hyperbolic space</strong>.
+                    Unlike Euclidean geometry, hyperbolic geometry naturally
+                    models hierarchical and complex relational structures.
+                    The projected embeddings form hyperbolic audio sequences
+                    and hyperbolic video sequences that provide a richer
+                    representation space for cross-modal reasoning.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="method-block">
+
+            <div class="method-number">4</div>
+
+            <div class="method-content">
+
+                <h3>Hyperbolic Cross-Attention</h3>
+
+                <p>
+
+                    VINAYAKA performs bidirectional cross-modal reasoning
+                    through two complementary attention mechanisms.
+                    <strong>Audio-Guided Visual Attention</strong>
+                    uses audio representations to identify informative visual cues,
+                    while
+                    <strong>Video-Guided Audio Attention</strong>
+                    uses visual representations to identify informative audio cues.
+                    Performing attention directly in hyperbolic space enables
+                    the model to capture nuanced relationships between speech
+                    characteristics and visual behavior that are indicative of
+                    hateful intent.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="method-block">
+
+            <div class="method-number">5</div>
+
+            <div class="method-content">
+
+                <h3>Hyperbolic Fusion and Classification</h3>
+
+                <p>
+
+                    The attended audio-to-visual and visual-to-audio
+                    representations are combined through
+                    <strong>hyperbolic fusion</strong>,
+                    producing a unified multimodal representation that
+                    preserves the geometric structure learned in hyperbolic space.
+                    The fused representation is passed through a fully connected
+                    classification network, which predicts whether the input
+                    video contains
+                    <strong>hate speech</strong>
+                    or
+                    <strong>non-hate speech</strong>.
+
+                </p>
+
+            </div>
 
         </div>
 
     </div>
 
 </section>
+
 
 
 
