@@ -1,0 +1,383 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VINAYAKA | Interspeech 2026</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ========================= -->
+<!-- NAVIGATION -->
+<!-- ========================= -->
+
+<nav class="navbar">
+    <div class="nav-container">
+
+        <div class="logo">
+            VINAYAKA
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#abstract">Abstract</a></li>
+            <li><a href="#method">Method</a></li>
+            <li><a href="#results">Results</a></li>
+            <li><a href="#citation">Citation</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </div>
+</nav>
+
+
+<!-- ========================= -->
+<!-- HERO SECTION -->
+<!-- ========================= -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <h1>
+            VINAYAKA:
+            Multilingual Audio-Visual Hate Speech Detection
+            via Cross-Modal Fusion in Hyperbolic Space
+        </h1>
+
+        <p class="conference">
+            Accepted at Interspeech 2026
+        </p>
+
+        <!-- Authors -->
+
+        <div class="authors">
+
+            <span>
+                Bhavinkumar Vinodbhai Kuwar<sup>1,2</sup>
+            </span>
+
+            <span>
+                Orchic Chetia Phukan<sup>3</sup>
+            </span>
+
+            <span>
+                Rajesh Sharma<sup>1,4</sup>
+            </span>
+
+        </div>
+
+        <!-- Affiliations -->
+
+        <div class="affiliations">
+
+            <p><sup>1</sup> Plaksha University, India</p>
+            <p><sup>2</sup> IIIT Delhi, India</p>
+            <p><sup>3</sup> NTHU, Taiwan</p>
+            <p><sup>4</sup> University of Tartu, Estonia</p>
+
+        </div>
+
+        <!-- Buttons -->
+
+        <div class="button-group">
+
+            <a class="primary-btn"
+               href="assets/paper.pdf"
+               target="_blank">
+               Paper
+            </a>
+
+            <a class="secondary-btn"
+               href="#">
+               Code (Coming Soon)
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================= -->
+<!-- TEASER -->
+<!-- ========================= -->
+
+<section class="teaser">
+
+    <div class="container">
+
+        <img
+            src="assets/architecture.png"
+            alt="VINAYAKA Architecture"
+            class="teaser-image">
+
+        <p class="figure-caption">
+
+            <strong>Figure 1.</strong>
+
+            Overview of VINAYAKA.
+            Audio representations extracted using WavLM and
+            visual representations extracted using ImageBind
+            are projected into hyperbolic space where
+            cross-modal attention and hyperbolic fusion jointly
+            model multilingual hateful intent.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================= -->
+<!-- ABSTRACT -->
+<!-- ========================= -->
+
+<section id="abstract" class="section">
+
+    <div class="container">
+
+        <h2>Abstract</h2>
+
+        <p>
+
+            In this work, we investigate the robustness of
+            audio–visual (AV) cues for Multilingual
+            Audio–Visual Hate Speech Detection (M-AVHSD).
+
+            We propose <strong>VINAYAKA</strong>, a novel
+            framework for M-AVHSD that relies solely on AV cues
+            for decision-making.
+
+            Along with WavLM and ImageBind, it employs
+            Cross-modal Fusion in Hyperbolic Space (CFHS),
+            which models the effective alignment between
+            paralinguistic and behavioral AV cues to better
+            capture hateful intent in temporal audio signals
+            and corresponding visual scenes.
+
+            Empirical results demonstrate that the proposed
+            framework achieves state-of-the-art performance
+            in both in-distribution and out-of-distribution
+            settings across cross-lingual and cross-dataset
+            evaluations.
+
+            Furthermore, the results show that the framework
+            remains robust to ASR error propagation.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================= -->
+<!-- CONTRIBUTIONS -->
+<!-- ========================= -->
+
+<section class="section gray-section">
+
+    <div class="container">
+
+        <h2>Key Contributions</h2>
+
+        <div class="contribution-grid">
+
+            <div class="card">
+                <h3>Text-Free Detection</h3>
+                <p>
+                    Detects hateful intent using only
+                    audio-visual cues without relying on
+                    transcriptions.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Hyperbolic Fusion</h3>
+                <p>
+                    Introduces Cross-modal Fusion in
+                    Hyperbolic Space (CFHS) to model
+                    interactions between audio and visual
+                    behavioral signals.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Cross-Lingual Robustness</h3>
+                <p>
+                    Generalizes across languages and datasets
+                    under challenging out-of-distribution
+                    conditions.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>ASR Independent</h3>
+                <p>
+                    Remains robust even when automatic speech
+                    recognition systems introduce errors.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================= -->
+<!-- METHOD -->
+<!-- ========================= -->
+
+<section id="method" class="section">
+
+    <div class="container">
+
+        <h2>Method Overview</h2>
+
+        <img
+            src="assets/architecture.png"
+            class="method-image">
+
+        <div class="method-description">
+
+            <p>
+                VINAYAKA extracts audio representations using
+                WavLM and visual representations using
+                ImageBind.
+            </p>
+
+            <p>
+                Both modalities are projected into
+                hyperbolic space, enabling geometry-aware
+                modeling of semantic and behavioral
+                relationships.
+            </p>
+
+            <p>
+                Audio-guided visual attention and
+                video-guided audio attention are performed
+                through hyperbolic cross-attention modules.
+            </p>
+
+            <p>
+                Finally, fused hyperbolic representations
+                are used for hate speech classification.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================= -->
+<!-- RESULTS -->
+<!-- ========================= -->
+
+<section id="results" class="section gray-section">
+
+    <div class="container">
+
+        <h2>Results</h2>
+
+        <p class="results-note">
+            Replace the placeholder below with the complete
+            HTML version of your table or a high-resolution
+            exported image from the camera-ready paper.
+        </p>
+
+        <div class="results-placeholder">
+
+            INSERT_RESULTS_TABLE_HERE
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================= -->
+<!-- CITATION -->
+<!-- ========================= -->
+
+<section id="citation" class="section">
+
+    <div class="container">
+
+        <h2>Citation</h2>
+
+        <pre class="bibtex">
+@inproceedings{vinayaka2026,
+    title={Multilingual Audio-Visual Hate Speech Detection via Cross-Modal Fusion in Hyperbolic Space},
+    author={Bhavinkumar Vinodbhai Kuwar and Orchic Chetia Phukan and Rajesh Sharma},
+    booktitle={Interspeech},
+    year={2026}
+}
+        </pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================= -->
+<!-- CONTACT -->
+<!-- ========================= -->
+
+<section id="contact" class="section gray-section">
+
+    <div class="container">
+
+        <h2>Contact</h2>
+
+        <p>
+            Bhavinkumar Vinodbhai Kuwar
+        </p>
+
+        <p>
+            bhavinkumar24212@iiitd.ac.in
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<footer>
+
+    <div class="container">
+
+        <p>
+            © 2026 VINAYAKA Project Page
+        </p>
+
+    </div>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+```
