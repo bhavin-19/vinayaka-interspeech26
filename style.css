@@ -1,0 +1,480 @@
+```css
+/* ==========================================
+   GLOBAL
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #1f2937;
+    background: #ffffff;
+    line-height: 1.8;
+}
+
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.nav-container {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 16px 0;
+}
+
+.logo {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #2563eb;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #374151;
+    font-weight: 500;
+
+    transition: all 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #2563eb;
+}
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero {
+    padding-top: 90px;
+    padding-bottom: 60px;
+
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    line-height: 1.25;
+
+    font-weight: 800;
+
+    max-width: 950px;
+    margin: auto;
+}
+
+.conference {
+    margin-top: 25px;
+
+    display: inline-block;
+
+    padding: 10px 18px;
+
+    background: #eff6ff;
+    color: #2563eb;
+
+    border-radius: 999px;
+
+    font-weight: 700;
+}
+
+.authors {
+    margin-top: 35px;
+
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+
+    flex-wrap: wrap;
+
+    font-size: 1.05rem;
+}
+
+.authors span {
+    font-weight: 500;
+}
+
+.affiliations {
+    margin-top: 25px;
+    color: #6b7280;
+}
+
+.affiliations p {
+    margin-bottom: 4px;
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.button-group {
+    margin-top: 40px;
+
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+
+    text-decoration: none;
+
+    padding: 14px 26px;
+
+    border-radius: 10px;
+
+    font-weight: 600;
+
+    transition: all 0.25s ease;
+}
+
+.primary-btn {
+    background: #2563eb;
+    color: white;
+}
+
+.primary-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background: #f3f4f6;
+    color: #111827;
+}
+
+.secondary-btn:hover {
+    background: #e5e7eb;
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   TEASER
+========================================== */
+
+.teaser {
+    padding-bottom: 70px;
+}
+
+.teaser-image {
+
+    width: 100%;
+
+    border-radius: 16px;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow:
+        0px 8px 30px rgba(0,0,0,0.08);
+}
+
+.figure-caption {
+
+    margin-top: 18px;
+
+    text-align: center;
+
+    color: #4b5563;
+
+    font-size: 0.95rem;
+}
+
+/* ==========================================
+   SECTIONS
+========================================== */
+
+.section {
+    padding: 90px 0;
+}
+
+.section h2 {
+
+    text-align: center;
+
+    font-size: 2.2rem;
+
+    margin-bottom: 40px;
+
+    font-weight: 800;
+}
+
+.section p {
+    font-size: 1.05rem;
+}
+
+/* ==========================================
+   ALTERNATE BACKGROUND
+========================================== */
+
+.gray-section {
+    background: #f8fafc;
+}
+
+/* ==========================================
+   CONTRIBUTIONS
+========================================== */
+
+.contribution-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 24px;
+}
+
+.card {
+
+    background: white;
+
+    padding: 28px;
+
+    border-radius: 16px;
+
+    border: 1px solid #e5e7eb;
+
+    transition: all 0.25s ease;
+}
+
+.card:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 24px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+    margin-bottom: 12px;
+    color: #2563eb;
+}
+
+/* ==========================================
+   METHOD
+========================================== */
+
+.method-image {
+
+    width: 100%;
+
+    border-radius: 16px;
+
+    border: 1px solid #e5e7eb;
+
+    margin-bottom: 35px;
+}
+
+.method-description p {
+    margin-bottom: 16px;
+}
+
+/* ==========================================
+   RESULTS
+========================================== */
+
+.results-note {
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+    color: #6b7280;
+}
+
+.results-placeholder {
+
+    min-height: 250px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border: 2px dashed #cbd5e1;
+
+    border-radius: 14px;
+
+    background: white;
+
+    font-weight: 600;
+
+    color: #64748b;
+}
+
+/* If you later replace with a large table */
+
+.results-table-wrapper {
+    overflow-x: auto;
+}
+
+.results-table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 20px;
+}
+
+.results-table th,
+.results-table td {
+
+    padding: 12px;
+
+    border: 1px solid #e5e7eb;
+
+    text-align: center;
+}
+
+.results-table th {
+    background: #eff6ff;
+}
+
+.highlight-row {
+    background: #dbeafe;
+    font-weight: 700;
+}
+
+/* ==========================================
+   BIBTEX
+========================================== */
+
+.bibtex {
+
+    background: #111827;
+
+    color: #f9fafb;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    overflow-x: auto;
+
+    font-size: 0.95rem;
+}
+
+/* ==========================================
+   CONTACT
+========================================== */
+
+#contact {
+    text-align: center;
+}
+
+#contact p {
+    margin-bottom: 10px;
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer {
+
+    padding: 35px 0;
+
+    text-align: center;
+
+    border-top: 1px solid #e5e7eb;
+
+    color: #6b7280;
+
+    background: white;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 900px) {
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .authors {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links {
+        gap: 14px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        padding-top: 60px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .section h2 {
+        font-size: 1.8rem;
+    }
+
+    .button-group {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+```
