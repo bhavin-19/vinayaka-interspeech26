@@ -414,23 +414,280 @@
 
 <section id="results" class="section gray-section">
 
-    <div class="container">
 
-        <h2>Results</h2>
+<div class="table-wrapper">
 
-        <p class="results-note">
-            Replace the placeholder below with the complete
-            HTML version of your table or a high-resolution
-            exported image from the camera-ready paper.
-        </p>
+<table class="results-table">
 
-        <div class="results-placeholder">
+    <caption>
+        Performance across In-domain and Cross-dataset Evaluation.
+        Acc and F1 refer to Accuracy and Macro-Average F1 respectively.
+    </caption>
 
-            INSERT_RESULTS_TABLE_HERE
+    <thead>
 
-        </div>
+        <tr>
+            <th rowspan="2">Model</th>
 
-    </div>
+            <th colspan="2">HateMM</th>
+            <th colspan="2">MH-En</th>
+            <th colspan="2">MH-Ch</th>
+            <th colspan="2">ToxCMM</th>
+        </tr>
+
+        <tr>
+
+            <th>Acc</th>
+            <th>F1</th>
+
+            <th>Acc</th>
+            <th>F1</th>
+
+            <th>Acc</th>
+            <th>F1</th>
+
+            <th>Acc</th>
+            <th>F1</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        <tr class="section-row">
+            <td colspan="9">
+                In-Distribution Evaluation
+            </td>
+        </tr>
+
+        <tr>
+            <td>A</td>
+            <td>.798</td><td>.786</td>
+            <td>.648</td><td>.636</td>
+            <td>.642</td><td>.629</td>
+            <td>.781</td><td>.774</td>
+        </tr>
+
+        <tr>
+            <td>V</td>
+            <td>.815</td><td>.804</td>
+            <td>.664</td><td>.652</td>
+            <td>.661</td><td>.649</td>
+            <td>.768</td><td>.761</td>
+        </tr>
+
+        <tr>
+            <td>CON</td>
+            <td>.836</td><td>.826</td>
+            <td>.708</td><td>.695</td>
+            <td>.701</td><td>.689</td>
+            <td>.807</td><td>.797</td>
+        </tr>
+
+        <tr>
+            <td>ECA</td>
+            <td>.861</td><td>.848</td>
+            <td>.748</td><td>.735</td>
+            <td>.755</td><td>.742</td>
+            <td>.848</td><td>.835</td>
+        </tr>
+
+        <tr>
+            <td>MA</td>
+            <td>.883</td><td>.871</td>
+            <td>.782</td><td>.779</td>
+            <td>.739</td><td>.725</td>
+            <td>.835</td><td>.825</td>
+        </tr>
+
+        <tr class="highlight-row">
+            <td>VINAYAKA</td>
+            <td>.914</td><td>.901</td>
+            <td>.849</td><td>.841</td>
+            <td>.847</td><td>.831</td>
+            <td>.892</td><td>.885</td>
+        </tr>
+
+        <tr class="section-row">
+            <td colspan="9">
+                Out-of-Distribution / Cross-Dataset Evaluation
+            </td>
+        </tr>
+
+        <tr class="dataset-row">
+            <td colspan="9">
+                Training Dataset: HateMM (HMM)
+            </td>
+        </tr>
+
+        <tr>
+            <td>MM-HSD</td>
+            <td>.878</td><td>.874</td>
+            <td>.623</td><td>.602</td>
+            <td>.416</td><td>.422</td>
+            <td>.597</td><td>.581</td>
+        </tr>
+
+        <tr>
+            <td>MHC</td>
+            <td>.809</td><td>.795</td>
+            <td>.697</td><td>.681</td>
+            <td>.511</td><td>.506</td>
+            <td>.556</td><td>.542</td>
+        </tr>
+
+        <tr>
+            <td>TVLM</td>
+            <td>.833</td><td>.821</td>
+            <td>.769</td><td>.761</td>
+            <td>.497</td><td>.480</td>
+            <td>.632</td><td>.641</td>
+        </tr>
+
+        <tr class="highlight-row">
+            <td>VINAYAKA</td>
+            <td>.914</td><td>.901</td>
+            <td>.808</td><td>.789</td>
+            <td>.563</td><td>.551</td>
+            <td>.724</td><td>.712</td>
+        </tr>
+
+        <tr class="dataset-row">
+            <td colspan="9">
+                Training Dataset: MultiHateClip-En (MHCE)
+            </td>
+        </tr>
+
+        <tr>
+            <td>MM-HSD</td>
+            <td>.733</td><td>.717</td>
+            <td>.815</td><td>.801</td>
+            <td>.507</td><td>.483</td>
+            <td>.622</td><td>.609</td>
+        </tr>
+
+        <tr>
+            <td>MHC</td>
+            <td>.711</td><td>.727</td>
+            <td>.810</td><td>.790</td>
+            <td>.595</td><td>.541</td>
+            <td>.639</td><td>.622</td>
+        </tr>
+
+        <tr>
+            <td>TVLM</td>
+            <td>.755</td><td>.729</td>
+            <td>.833</td><td>.812</td>
+            <td>.520</td><td>.503</td>
+            <td>.641</td><td>.622</td>
+        </tr>
+
+        <tr class="highlight-row">
+            <td>VINAYAKA</td>
+            <td>.797</td><td>.786</td>
+            <td>.849</td><td>.841</td>
+            <td>.626</td><td>.619</td>
+            <td>.715</td><td>.706</td>
+        </tr>
+
+
+
+
+        ```html
+        <tr class="dataset-row">
+            <td colspan="9">
+                Training Dataset: MultiHateClip-Ch (MHCC)
+            </td>
+        </tr>
+
+        <tr>
+            <td>MM-HSD</td>
+            <td>.538</td><td>.540</td>
+            <td>.518</td><td>.492</td>
+            <td>.834</td><td>.820</td>
+            <td>.555</td><td>.527</td>
+        </tr>
+
+        <tr>
+            <td>MHC</td>
+            <td>.446</td><td>.425</td>
+            <td>.579</td><td>.562</td>
+            <td>.800</td><td>.780</td>
+            <td>.411</td><td>.392</td>
+        </tr>
+
+        <tr>
+            <td>TVLM</td>
+            <td>.528</td><td>.515</td>
+            <td>.299</td><td>.330</td>
+            <td>.609</td><td>.576</td>
+            <td>.527</td><td>.508</td>
+        </tr>
+
+        <tr class="highlight-row">
+            <td>VINAYAKA</td>
+            <td>.566</td><td>.557</td>
+            <td>.619</td><td>.616</td>
+            <td>.847</td><td>.831</td>
+            <td>.621</td><td>.612</td>
+        </tr>
+
+        <tr class="dataset-row">
+            <td colspan="9">
+                Training Dataset: ToxCMM
+            </td>
+        </tr>
+
+        <tr>
+            <td>MM-HSD</td>
+            <td>.602</td><td>.581</td>
+            <td>.672</td><td>.657</td>
+            <td>.410</td><td>.390</td>
+            <td>.828</td><td>.819</td>
+        </tr>
+
+        <tr>
+            <td>MHC</td>
+            <td>.596</td><td>.577</td>
+            <td>.649</td><td>.633</td>
+            <td>.555</td><td>.534</td>
+            <td>.789</td><td>.771</td>
+        </tr>
+
+        <tr>
+            <td>TVLM</td>
+            <td>.558</td><td>.522</td>
+            <td>.700</td><td>.683</td>
+            <td>.555</td><td>.521</td>
+            <td>.823</td><td>.842</td>
+        </tr>
+
+        <tr class="highlight-row">
+            <td>VINAYAKA</td>
+            <td>.726</td><td>.712</td>
+            <td>.709</td><td>.693</td>
+            <td>.585</td><td>.577</td>
+            <td>.892</td><td>.885</td>
+        </tr>
+
+    </tbody>
+
+</table>
+
+</div>
+
+<p class="table-caption">
+
+    <strong>Table.</strong>
+    Performance across In-domain and Cross-dataset Evaluation.
+    Acc and F1 refer to Accuracy and Macro-Average F1 respectively.
+    A = Audio-only, V = Video-only, CON = Concatenation,
+    ECA = Euclidean Cross-Attention, MA = Möbius Addition,
+    and VINAYAKA denotes the proposed approach.
+
+</p>
+
 
 </section>
 
